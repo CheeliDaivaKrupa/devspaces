@@ -19,7 +19,8 @@ components:
           path: /api/v1/flights
       env:
         - name: CHE_PLUGIN_REGISTRY_URL
-          value: https://open-vsx.org
+          value: https://devspaces.apps.sandbox-m3.1530.p1.openshiftapps.com/plugin-registry/v3
+          # value: https://open-vsx.org
   - name: m2
     volume:
       size: 2Gi
