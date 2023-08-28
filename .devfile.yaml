@@ -17,9 +17,9 @@ components:
           targetPort: 8080
           protocol: https
           path: /api/v1/flights
-      env:
-        - name: CHE_PLUGIN_REGISTRY_URL
-          value: https://open-vsx.org
+      # env:
+      #   - name: CHE_PLUGIN_REGISTRY_URL
+      #     value: https://open-vsx.org
   - name: m2
     volume:
       size: 2Gi
