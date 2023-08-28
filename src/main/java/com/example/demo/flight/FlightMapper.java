@@ -2,7 +2,7 @@ package com.example.demo.flight;
 
 import com.example.demo.v1.FlightApi;
 import com.example.demo.v1.FlightRequest;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.HtmlUtils;
 
