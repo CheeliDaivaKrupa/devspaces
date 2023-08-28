@@ -1,0 +1,38 @@
+schemaVersion: 2.2.0
+metadata:
+  name: java-springboot
+components:
+  - name: springboot-dev
+    container:
+      sourceMapping: /projects
+      memoryLimit: 8Gi
+      memoryRequest: 512Mi
+      volumeMounts:
+        - name: m2
+          path: /home/user/.m2
+      image: registry.redhat.io/devspaces/udi-rhel8
+      endpoints:
+        - name: flights
+          exposure: public
+          targetPort: 8080
+          protocol: https
+          path: /api/v1/flights
+      env:
+        - name: CHE_PLUGIN_REGISTRY_URL
+          value: https://open-vsx.org
+  - name: m2
+    volume:
+      size: 2Gi
+commands:
+  - exec:
+      commandLine: ./gradlew clean build
+      component: springboot-dev
+      workingDir: '/projects/devspaces'
+      label: Start Quarkus in Dev Mode (getting-started)
+    id: springboot-dev-mode
+  - exec:
+      commandLine: ./gradlew bootRun
+      component: springboot-dev
+      workingDir: '/projects/devspaces'
+      label: Start Quarkus in Dev Mode (getting-started)
+    id: springboot-dev-mode  
