@@ -1,6 +1,6 @@
 schemaVersion: 2.2.0
 metadata:
-  name: java-springboot-eclipse-theia
+  name: java-springboot-eclipse
 components:
   - name: springboot-dev
     container:
