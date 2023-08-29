@@ -1,6 +1,6 @@
 schemaVersion: 2.2.0
 metadata:
-  name: java-springboot-intellij
+  name: java-springboot-vscode
 components:
   - name: springboot-dev
     container:
