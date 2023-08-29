@@ -5,8 +5,8 @@ components:
   - name: springboot-dev
     container:
       sourceMapping: /projects
-      memoryLimit: 8Gi
-      memoryRequest: 512Mi
+      memoryLimit: 6144Mi
+      memoryRequest: 2048Mi
       volumeMounts:
         - name: m2
           path: /home/user/.m2
