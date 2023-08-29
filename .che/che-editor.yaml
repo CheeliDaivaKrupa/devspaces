@@ -1,5 +1,5 @@
 id: che-incubator/che-idea/latest
-registryUrl: https://open-vsx.org
+# registryUrl: https://open-vsx.org
 # https://eclipse-che.github.io/che-plugin-registry/main/v3
 # override:
 #   containers:
